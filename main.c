@@ -474,11 +474,6 @@ static void I2Cx_Error (void)
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	if(htim -> Instance == TIM1) //если будет несколько таймеров, чтобы попасть именно в нужный
 		{
-		  //Mag_Init(); // Только если установлена ODR в функции инициализации Mag_Init(), то можно удалить отсюда
-		  //Mag_GetXYZ(pData);
-		  //mx = pData[0];
-		  //my = pData[1];
-		  //mz = pData[2];
 		    Mag_ReadData ();
 		}
 }
